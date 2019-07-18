@@ -20,7 +20,7 @@ public class BookHandler implements CourseHandler {
 
 	@Override
 	public void add() {
-		System.out.println("Selected option: Add Book");
+		System.out.println("Selected option: Add New Book");
 		System.out.println("Enter title:");
 		String title = CourseApplication.sc.nextLine();
 		System.out.println("Enter price:");

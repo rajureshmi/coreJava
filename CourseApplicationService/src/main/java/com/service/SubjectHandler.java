@@ -66,8 +66,8 @@ public class SubjectHandler implements CourseHandler {
 		if (Objects.nonNull(selectedBooksDao)) {
 			for (SubjectDao subjectDao : existingSubjectList) {
 				System.out.println("Subject ID: " + subjectDao.getSubjectId() + ", Subject Title: "
-						+ subjectDao.getSubjectTitle() + "Associated Books: "
-						+ displayBooks(getCourseBooks(subjectDao.getSubjectId(), existingBookList)) + "/n");
+						+ subjectDao.getSubjectTitle() + " \n Associated Books: "
+						+ displayBooks(getCourseBooks(subjectDao.getSubjectId(), existingBookList)) + "\n");
 			}
 		} else {
 			System.out.println("No books found");
@@ -77,7 +77,7 @@ public class SubjectHandler implements CourseHandler {
 	private String displayBooks(Set<BookDao> books) {
 		StringBuilder sb = new StringBuilder();
 		for (BookDao book : books) {
-			sb.append("/n");
+			sb.append("\n");
 			sb.append(book.getBookId());
 			sb.append(SPACE);
 			sb.append(book.getTitle());
